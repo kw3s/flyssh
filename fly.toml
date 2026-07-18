@@ -1,0 +1,10 @@
+app = "fly-ssh"
+
+primary_region = "jnb"
+
+[[services]]
+internal_port = 22
+protocol = "tcp"
+
+[[services.ports]]
+port = 22
