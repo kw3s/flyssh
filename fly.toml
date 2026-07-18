@@ -1,10 +1,12 @@
-app = "fly-ssh"
+app = "flyssh-prfqpw"
 
 primary_region = "jnb"
 
 [[services]]
-internal_port = 22
+internal_port = 2222
 protocol = "tcp"
+auto_stop_machines = true
+auto_start_machines = true
 
-[[services.ports]]
-port = 22
+  [[services.ports]]
+  port = 22
