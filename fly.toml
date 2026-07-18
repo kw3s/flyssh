@@ -1,17 +1,13 @@
 app = "flyssh-prfqpw"
-
 primary_region = "jnb"
 
 [[services]]
   internal_port = 2222
   protocol = "tcp"
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
 
   [[services.ports]]
     port = 22
     handlers = []
-auto_stop_machines = false
-auto_start_machines = true
-min_machines_running = 1
-
-  [[services.ports]]
-  port = 22
