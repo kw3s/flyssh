@@ -1,0 +1,20 @@
+{
+  "inbounds": [
+    {
+      "port": 10000,
+      "listen": "0.0.0.0",
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          { "id": "PASTE-YOUR-UUID-HERE", "encryption": "none" }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": { "path": "/fp" }
+      }
+    }
+  ],
+  "outbounds": [{ "protocol": "freedom" }]
+}

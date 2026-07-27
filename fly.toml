@@ -1,0 +1,13 @@
+app = "your-vless-app-name"
+primary_region = "jnb"
+
+[[services]]
+  internal_port = 10000
+  protocol = "tcp"
+  auto_stop_machines = false
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
