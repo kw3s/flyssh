@@ -1,17 +1,1 @@
-Port 2222
 
-Protocol 2
-
-PermitRootLogin no
-
-PasswordAuthentication no
-
-PubkeyAuthentication yes
-
-ChallengeResponseAuthentication no
-
-UsePAM yes
-
-X11Forwarding no
-
-Subsystem sftp /usr/lib/openssh/sftp-server
