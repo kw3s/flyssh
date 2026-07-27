@@ -1,18 +1,4 @@
-FROM ubuntu:24.04
-
-ENV DEBIAN_FRONTEND=noninteractive
-
-RUN apt-get update && \
-    apt-get install -y openssh-server && \
-    apt-get clean
-
-RUN mkdir -p /var/run/sshd
-
-COPY sshd_config /etc/ssh/sshd_config
-COPY entrypoint.sh /entrypoint.sh
-
-RUN chmod +x /entrypoint.sh
-
-EXPOSE 2222
-
-ENTRYPOINT ["/entrypoint.sh"]
+FROM v2fly/v2fly-core:latest
+COPY config.json /etc/v2ray/config.json
+EXPOSE 10000
+ENTRYPOINT ["v2ray", "run", "-config", "/etc/v2ray/config.json"]
