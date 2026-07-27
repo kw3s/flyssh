@@ -6,7 +6,7 @@
       "protocol": "vless",
       "settings": {
         "clients": [
-          { "id": "7db4c101-c07a-448e-a94b-e225c7d8cb5e", "encryption": "none" }
+          { "id": "7db4c101-c07a-448e-a94b-e225c7d8cb5e" }
         ],
         "decryption": "none"
       },
