@@ -1,4 +1,4 @@
-app = "your-vless-app-name"
+app = "flyssh-prfqpw"
 primary_region = "jnb"
 
 [[services]]
