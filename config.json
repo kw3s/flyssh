@@ -1,4 +1,7 @@
 {
+  "log": {
+    "loglevel": "warning"
+  },
   "inbounds": [
     {
       "port": 10000,
@@ -6,15 +9,24 @@
       "protocol": "vless",
       "settings": {
         "clients": [
-          { "id": "PASTE-YOUR-UUID-HERE", "encryption": "none" }
+          {
+            "id": "e8d7c3b2-1a4f-4e5d-8b9c-0f1e2d3c4b5a",
+            "level": 0
+          }
         ],
         "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
-        "wsSettings": { "path": "/fp" }
+        "wsSettings": {
+          "path": "/fp"
+        }
       }
     }
   ],
-  "outbounds": [{ "protocol": "freedom" }]
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
 }
