@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 v2ray run -config /etc/v2ray/config.json &
-cloudflared tunnel run --token eyJhIjoiMWEzYTEzYThiNjE5NWM5MzliYjk5M2FiNWJlZjJlMjciLCJ0IjoiMjM3ZGM5NWUtMjMzNy00MDZiLWFiNmMtY2I4ZjBkYmJlM2ZkIiwicyI6Ik5XTmlZalJpTlRFdE1EQTBOQzAwWldKaUxUbGpObU10T0dJM01tRTBNRGs1TURjeSJ9
+cloudflared tunnel run --token "$CLOUDFLARE_TUNNEL_TOKEN"
