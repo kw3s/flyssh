@@ -1,12 +1,12 @@
+FROM cloudflare/cloudflared:latest AS cloudflared
+
 FROM v2fly/v2fly-core:latest
 
-RUN apt-get update && apt-get install -y wget && \
-    wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -O /usr/local/bin/cloudflared && \
-    chmod +x /usr/local/bin/cloudflared
+COPY --from=cloudflared /usr/local/bin/cloudflared /usr/local/bin/cloudflared
 
 COPY config.json /etc/v2ray/config.json
 COPY start.sh /start.sh
-RUN chmod +x /start.sh
+RUN chmod +x /start.sh /usr/local/bin/cloudflared
 
 EXPOSE 10000
 ENTRYPOINT ["/start.sh"]
