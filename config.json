@@ -1,32 +1,33 @@
 {
-  "log": {
-    "loglevel": "warning"
-  },
   "inbounds": [
     {
       "port": 10000,
       "listen": "0.0.0.0",
       "protocol": "vless",
       "settings": {
-        "clients": [
-          {
-            "id": "e8d7c3b2-1a4f-4e5d-8b9c-0f1e2d3c4b5a",
-            "level": 0
-          }
-        ],
+        "clients": [{ "id": "e8d7c3b2-1a4f-4e5d-8b9c-0f1e2d3c4b5a" }],
         "decryption": "none"
       },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/fp"
-        }
-      }
+      "streamSettings": { "network": "ws", "wsSettings": { "path": "/vless" } }
+    },
+    {
+      "port": 10001,
+      "listen": "0.0.0.0",
+      "protocol": "vmess",
+      "settings": {
+        "clients": [{ "id": "e8d7c3b2-1a4f-4e5d-8b9c-0f1e2d3c4b5a" }]
+      },
+      "streamSettings": { "network": "ws", "wsSettings": { "path": "/vmess" } }
+    },
+    {
+      "port": 10002,
+      "listen": "0.0.0.0",
+      "protocol": "trojan",
+      "settings": {
+        "clients": [{ "password": "3fX9!kP2vWqZxR8uJ" }]
+      },
+      "streamSettings": { "network": "ws", "wsSettings": { "path": "/trojan" } }
     }
   ],
-  "outbounds": [
-    {
-      "protocol": "freedom"
-    }
-  ]
+  "outbounds": [{ "protocol": "freedom" }]
 }
